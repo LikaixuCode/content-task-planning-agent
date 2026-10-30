@@ -1,0 +1,34 @@
+{
+  "request_id": "case-normal",
+  "mode": "glm",
+  "status": "incomplete",
+  "reason": "api_error",
+  "missing_fields": [],
+  "invalidated_dependencies": [],
+  "budget": "15",
+  "deadline": "2026-12-01T13:00:00+08:00",
+  "start_at": "2026-12-01T09:00:00+08:00",
+  "selected_estimate": null,
+  "candidate_gaps": [],
+  "plan_save_status": "not_saved",
+  "plan_id": null,
+  "plan": null,
+  "steps": [],
+  "terminal": {
+    "status": "incomplete",
+    "reason": "api_error",
+    "turns": 1,
+    "model": "glm-5.3-flash",
+    "api_error_status": null,
+    "detail": "Request timed out",
+    "reported_models": [
+      "<synthetic>"
+    ],
+    "sdk_events": [],
+    "tool_calls": 0,
+    "max_tool_calls": 1
+  },
+  "trace": [],
+  "duplicate": false,
+  "resumable": true
+}

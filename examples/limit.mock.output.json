@@ -1,0 +1,135 @@
+{
+  "request_id": "case-normal",
+  "mode": "mock",
+  "status": "incomplete",
+  "reason": "max_tool_calls",
+  "missing_fields": [],
+  "invalidated_dependencies": [],
+  "budget": "15",
+  "deadline": "2026-12-01T13:00:00+08:00",
+  "start_at": "2026-12-01T09:00:00+08:00",
+  "selected_estimate": null,
+  "candidate_gaps": [],
+  "plan_save_status": "not_saved",
+  "plan_id": null,
+  "plan": null,
+  "steps": [
+    {
+      "run_id": "07001170-a08b-498d-9a1c-a93010bc6ed1",
+      "tool": "search_materials",
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "status": "succeeded",
+        "cached": false,
+        "materials": [
+          {
+            "id": "M01",
+            "title": "新品体验素材",
+            "description": "展示产品亮点、使用体验和活动引导的合成素材。",
+            "keywords": [
+              "新品",
+              "产品",
+              "发布"
+            ]
+          },
+          {
+            "id": "M02",
+            "title": "节日活动素材",
+            "description": "展示节日主题、互动话题和活动引导的合成素材。",
+            "keywords": [
+              "节日",
+              "活动",
+              "推广"
+            ]
+          }
+        ],
+        "variants": [
+          "enhanced",
+          "lean"
+        ]
+      }
+    },
+    {
+      "run_id": "07001170-a08b-498d-9a1c-a93010bc6ed1",
+      "tool": "estimate_cost",
+      "status": "rejected",
+      "result": {
+        "ok": false,
+        "status": "rejected",
+        "code": "max_tool_calls",
+        "message": "业务工具调用达到上限"
+      }
+    }
+  ],
+  "terminal": {
+    "status": "incomplete",
+    "source": "scripted_mock",
+    "reason": "max_tool_calls",
+    "tool_calls": 1,
+    "max_tool_calls": 1
+  },
+  "trace": [
+    {
+      "run_id": "07001170-a08b-498d-9a1c-a93010bc6ed1",
+      "mode": "mock",
+      "step": 1,
+      "tool": "search_materials",
+      "arguments": {},
+      "reason": "检索主题相关素材",
+      "result": {
+        "ok": true,
+        "status": "succeeded",
+        "cached": false,
+        "materials": [
+          {
+            "id": "M01",
+            "title": "新品体验素材",
+            "description": "展示产品亮点、使用体验和活动引导的合成素材。",
+            "keywords": [
+              "新品",
+              "产品",
+              "发布"
+            ]
+          },
+          {
+            "id": "M02",
+            "title": "节日活动素材",
+            "description": "展示节日主题、互动话题和活动引导的合成素材。",
+            "keywords": [
+              "节日",
+              "活动",
+              "推广"
+            ]
+          }
+        ],
+        "variants": [
+          "enhanced",
+          "lean"
+        ]
+      },
+      "next_action": "estimate_cost"
+    },
+    {
+      "run_id": "07001170-a08b-498d-9a1c-a93010bc6ed1",
+      "mode": "mock",
+      "step": 2,
+      "tool": "estimate_cost",
+      "arguments": {
+        "material_id": "M01",
+        "variant": "enhanced"
+      },
+      "reason": "估算候选方案的费用与耗时",
+      "result": {
+        "ok": false,
+        "status": "rejected",
+        "code": "max_tool_calls",
+        "message": "业务工具调用达到上限"
+      },
+      "next_action": "interrupted",
+      "termination_reason": "max_tool_calls"
+    }
+  ],
+  "duplicate": false,
+  "resumable": true
+}

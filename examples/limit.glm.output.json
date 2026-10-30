@@ -1,0 +1,125 @@
+{
+  "request_id": "case-normal",
+  "mode": "glm",
+  "status": "incomplete",
+  "reason": "max_tool_calls",
+  "missing_fields": [],
+  "invalidated_dependencies": [],
+  "budget": "15",
+  "deadline": "2026-12-01T13:00:00+08:00",
+  "start_at": "2026-12-01T09:00:00+08:00",
+  "selected_estimate": null,
+  "candidate_gaps": [],
+  "plan_save_status": "not_saved",
+  "plan_id": null,
+  "plan": null,
+  "steps": [
+    {
+      "run_id": "01bcfe21-9672-4efc-b81c-aef539a98a56",
+      "tool": "search_materials",
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "status": "succeeded",
+        "cached": false,
+        "materials": [
+          {
+            "id": "M01",
+            "title": "新品体验素材",
+            "description": "展示产品亮点、使用体验和活动引导的合成素材。",
+            "keywords": [
+              "新品",
+              "产品",
+              "发布"
+            ]
+          },
+          {
+            "id": "M02",
+            "title": "节日活动素材",
+            "description": "展示节日主题、互动话题和活动引导的合成素材。",
+            "keywords": [
+              "节日",
+              "活动",
+              "推广"
+            ]
+          }
+        ],
+        "variants": [
+          "enhanced",
+          "lean"
+        ]
+      }
+    }
+  ],
+  "terminal": {
+    "status": "completed",
+    "reason": "completed",
+    "turns": 2,
+    "model": "glm-5.3-flash",
+    "reported_models": [
+      "glm-5.3-flash"
+    ],
+    "sdk_events": [
+      {
+        "type": "tool_request",
+        "tool_use_id": "call_8b64c5ac5f1f460eb95fb07a",
+        "message_id": "msg_20261030231056f0a89950da2441df",
+        "tool": "mcp__planning__search_materials",
+        "arguments": {
+          "reason": "检索\"新品发布活动\"主题的合成素材及可选方案类型，为后续增强版方案估算做准备。"
+        }
+      },
+      {
+        "type": "tool_result",
+        "tool_use_id": "call_8b64c5ac5f1f460eb95fb07a",
+        "is_error": null
+      }
+    ],
+    "tool_calls": 1,
+    "max_tool_calls": 1
+  },
+  "trace": [
+    {
+      "run_id": "01bcfe21-9672-4efc-b81c-aef539a98a56",
+      "mode": "glm",
+      "step": 1,
+      "tool": "search_materials",
+      "arguments": {},
+      "reason": "检索\"新品发布活动\"主题的合成素材及可选方案类型，为后续增强版方案估算做准备。",
+      "result": {
+        "ok": true,
+        "status": "succeeded",
+        "cached": false,
+        "materials": [
+          {
+            "id": "M01",
+            "title": "新品体验素材",
+            "description": "展示产品亮点、使用体验和活动引导的合成素材。",
+            "keywords": [
+              "新品",
+              "产品",
+              "发布"
+            ]
+          },
+          {
+            "id": "M02",
+            "title": "节日活动素材",
+            "description": "展示节日主题、互动话题和活动引导的合成素材。",
+            "keywords": [
+              "节日",
+              "活动",
+              "推广"
+            ]
+          }
+        ],
+        "variants": [
+          "enhanced",
+          "lean"
+        ]
+      },
+      "next_action": "finish"
+    }
+  ],
+  "duplicate": false,
+  "resumable": true
+}

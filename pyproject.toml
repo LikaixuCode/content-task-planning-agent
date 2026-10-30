@@ -1,0 +1,16 @@
+[project]
+name = "content-task-planning-agent"
+version = "0.1.0"
+description = "内容任务规划 Agent：预算、截止时间与失败恢复"
+requires-python = ">=3.12"
+dependencies = [
+    "claude-agent-sdk==0.2.175",
+    "pydantic>=2.10,<3",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<10"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

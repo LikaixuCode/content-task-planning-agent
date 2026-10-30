@@ -1,0 +1,19 @@
+{
+  "request_id": "case-missing",
+  "mode": "mock",
+  "status": "incomplete",
+  "reason": "missing_input",
+  "missing_fields": [
+    "budget",
+    "deadline"
+  ],
+  "plan_save_status": "not_saved",
+  "plan_id": null,
+  "steps": [],
+  "terminal": {
+    "status": "not_started",
+    "reason": "missing_input",
+    "tool_calls": 0
+  },
+  "trace": []
+}

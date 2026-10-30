@@ -1,0 +1,8 @@
+{
+  "material": {"name": "素材准备", "cost": "2", "duration_minutes": 30},
+  "variants": {
+    "enhanced": {"name": "增强版脚本", "cost": "6", "duration_minutes": 60},
+    "lean": {"name": "精简版脚本", "cost": "2", "duration_minutes": 30}
+  },
+  "package": {"name": "内容包装", "cost": "4", "duration_minutes": 30}
+}

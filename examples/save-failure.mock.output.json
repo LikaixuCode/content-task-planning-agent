@@ -1,0 +1,284 @@
+{
+  "request_id": "case-normal",
+  "mode": "mock",
+  "status": "incomplete",
+  "reason": "simulated_tool_failure",
+  "missing_fields": [],
+  "invalidated_dependencies": [],
+  "budget": "15",
+  "deadline": "2026-12-01T13:00:00+08:00",
+  "start_at": "2026-12-01T09:00:00+08:00",
+  "selected_estimate": {
+    "estimate_id": "est-5113a7095310",
+    "material_id": "M01",
+    "variant": "enhanced",
+    "line_items": [
+      {
+        "name": "素材准备",
+        "cost": "2",
+        "duration_minutes": 30
+      },
+      {
+        "name": "增强版脚本",
+        "cost": "6",
+        "duration_minutes": 60
+      },
+      {
+        "name": "内容包装",
+        "cost": "4",
+        "duration_minutes": 30
+      }
+    ],
+    "total_cost": "12",
+    "budget": "15",
+    "budget_gap": "0",
+    "duration_minutes": 120,
+    "start_at": "2026-12-01T09:00:00+08:00",
+    "finish_at": "2026-12-01T11:00:00+08:00",
+    "deadline": "2026-12-01T13:00:00+08:00",
+    "deadline_gap_minutes": 0,
+    "feasible": true
+  },
+  "candidate_gaps": [],
+  "plan_save_status": "not_saved",
+  "plan_id": null,
+  "plan": null,
+  "steps": [
+    {
+      "run_id": "45bc58dd-a195-4cc4-bfe3-fc682a404e39",
+      "tool": "search_materials",
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "status": "succeeded",
+        "cached": false,
+        "materials": [
+          {
+            "id": "M01",
+            "title": "新品体验素材",
+            "description": "展示产品亮点、使用体验和活动引导的合成素材。",
+            "keywords": [
+              "新品",
+              "产品",
+              "发布"
+            ]
+          },
+          {
+            "id": "M02",
+            "title": "节日活动素材",
+            "description": "展示节日主题、互动话题和活动引导的合成素材。",
+            "keywords": [
+              "节日",
+              "活动",
+              "推广"
+            ]
+          }
+        ],
+        "variants": [
+          "enhanced",
+          "lean"
+        ]
+      }
+    },
+    {
+      "run_id": "45bc58dd-a195-4cc4-bfe3-fc682a404e39",
+      "tool": "estimate_cost",
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "status": "succeeded",
+        "cached": false,
+        "estimate_id": "est-5113a7095310",
+        "material_id": "M01",
+        "variant": "enhanced",
+        "line_items": [
+          {
+            "name": "素材准备",
+            "cost": "2",
+            "duration_minutes": 30
+          },
+          {
+            "name": "增强版脚本",
+            "cost": "6",
+            "duration_minutes": 60
+          },
+          {
+            "name": "内容包装",
+            "cost": "4",
+            "duration_minutes": 30
+          }
+        ],
+        "total_cost": "12",
+        "budget": "15",
+        "budget_gap": "0",
+        "duration_minutes": 120,
+        "start_at": "2026-12-01T09:00:00+08:00",
+        "finish_at": "2026-12-01T11:00:00+08:00",
+        "deadline": "2026-12-01T13:00:00+08:00",
+        "deadline_gap_minutes": 0,
+        "feasible": true
+      }
+    },
+    {
+      "run_id": "45bc58dd-a195-4cc4-bfe3-fc682a404e39",
+      "tool": "generate_script",
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "status": "succeeded",
+        "cached": false,
+        "script_id": "script-cbd08ec722c6",
+        "estimate_id": "est-5113a7095310",
+        "material_id": "M01",
+        "variant": "enhanced",
+        "text": "开场：介绍新品发布活动。主体：结合新品体验素材展示三个活动亮点。结尾：邀请用户参与并分享体验。"
+      }
+    },
+    {
+      "run_id": "45bc58dd-a195-4cc4-bfe3-fc682a404e39",
+      "tool": "save_plan",
+      "status": "failed",
+      "result": {
+        "ok": false,
+        "status": "failed",
+        "code": "simulated_tool_failure",
+        "message": "方案保存模拟失败"
+      }
+    }
+  ],
+  "terminal": {
+    "status": "completed",
+    "source": "scripted_mock",
+    "tool_calls": 4,
+    "max_tool_calls": 20
+  },
+  "trace": [
+    {
+      "run_id": "45bc58dd-a195-4cc4-bfe3-fc682a404e39",
+      "mode": "mock",
+      "step": 1,
+      "tool": "search_materials",
+      "arguments": {},
+      "reason": "检索主题相关素材",
+      "result": {
+        "ok": true,
+        "status": "succeeded",
+        "cached": false,
+        "materials": [
+          {
+            "id": "M01",
+            "title": "新品体验素材",
+            "description": "展示产品亮点、使用体验和活动引导的合成素材。",
+            "keywords": [
+              "新品",
+              "产品",
+              "发布"
+            ]
+          },
+          {
+            "id": "M02",
+            "title": "节日活动素材",
+            "description": "展示节日主题、互动话题和活动引导的合成素材。",
+            "keywords": [
+              "节日",
+              "活动",
+              "推广"
+            ]
+          }
+        ],
+        "variants": [
+          "enhanced",
+          "lean"
+        ]
+      },
+      "next_action": "estimate_cost"
+    },
+    {
+      "run_id": "45bc58dd-a195-4cc4-bfe3-fc682a404e39",
+      "mode": "mock",
+      "step": 2,
+      "tool": "estimate_cost",
+      "arguments": {
+        "material_id": "M01",
+        "variant": "enhanced"
+      },
+      "reason": "估算候选方案的费用与耗时",
+      "result": {
+        "ok": true,
+        "status": "succeeded",
+        "cached": false,
+        "estimate_id": "est-5113a7095310",
+        "material_id": "M01",
+        "variant": "enhanced",
+        "line_items": [
+          {
+            "name": "素材准备",
+            "cost": "2",
+            "duration_minutes": 30
+          },
+          {
+            "name": "增强版脚本",
+            "cost": "6",
+            "duration_minutes": 60
+          },
+          {
+            "name": "内容包装",
+            "cost": "4",
+            "duration_minutes": 30
+          }
+        ],
+        "total_cost": "12",
+        "budget": "15",
+        "budget_gap": "0",
+        "duration_minutes": 120,
+        "start_at": "2026-12-01T09:00:00+08:00",
+        "finish_at": "2026-12-01T11:00:00+08:00",
+        "deadline": "2026-12-01T13:00:00+08:00",
+        "deadline_gap_minutes": 0,
+        "feasible": true
+      },
+      "next_action": "generate_script"
+    },
+    {
+      "run_id": "45bc58dd-a195-4cc4-bfe3-fc682a404e39",
+      "mode": "mock",
+      "step": 3,
+      "tool": "generate_script",
+      "arguments": {
+        "estimate_id": "est-5113a7095310"
+      },
+      "reason": "为可行方案生成活动脚本",
+      "result": {
+        "ok": true,
+        "status": "succeeded",
+        "cached": false,
+        "script_id": "script-cbd08ec722c6",
+        "estimate_id": "est-5113a7095310",
+        "material_id": "M01",
+        "variant": "enhanced",
+        "text": "开场：介绍新品发布活动。主体：结合新品体验素材展示三个活动亮点。结尾：邀请用户参与并分享体验。"
+      },
+      "next_action": "save_plan"
+    },
+    {
+      "run_id": "45bc58dd-a195-4cc4-bfe3-fc682a404e39",
+      "mode": "mock",
+      "step": 4,
+      "tool": "save_plan",
+      "arguments": {
+        "estimate_id": "est-5113a7095310",
+        "script_id": "script-cbd08ec722c6"
+      },
+      "reason": "保存满足预算和截止时间的方案",
+      "result": {
+        "ok": false,
+        "status": "failed",
+        "code": "simulated_tool_failure",
+        "message": "方案保存模拟失败"
+      },
+      "next_action": "finish"
+    }
+  ],
+  "duplicate": false,
+  "resumable": true
+}

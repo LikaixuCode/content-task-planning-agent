@@ -1,0 +1,315 @@
+{
+  "request_id": "case-no-feasible",
+  "mode": "mock",
+  "status": "incomplete",
+  "reason": "no_feasible_plan",
+  "missing_fields": [],
+  "invalidated_dependencies": [],
+  "budget": "6",
+  "deadline": "2026-12-01T13:00:00+08:00",
+  "start_at": "2026-12-01T09:00:00+08:00",
+  "selected_estimate": {
+    "estimate_id": "est-b7d67217d352",
+    "material_id": "M01",
+    "variant": "lean",
+    "line_items": [
+      {
+        "name": "素材准备",
+        "cost": "2",
+        "duration_minutes": 30
+      },
+      {
+        "name": "精简版脚本",
+        "cost": "2",
+        "duration_minutes": 30
+      },
+      {
+        "name": "内容包装",
+        "cost": "4",
+        "duration_minutes": 30
+      }
+    ],
+    "total_cost": "8",
+    "budget": "6",
+    "budget_gap": "2",
+    "duration_minutes": 90,
+    "start_at": "2026-12-01T09:00:00+08:00",
+    "finish_at": "2026-12-01T10:30:00+08:00",
+    "deadline": "2026-12-01T13:00:00+08:00",
+    "deadline_gap_minutes": 0,
+    "feasible": false
+  },
+  "candidate_gaps": [
+    {
+      "variant": "enhanced",
+      "budget_gap": "6",
+      "deadline_gap_minutes": 0
+    },
+    {
+      "variant": "lean",
+      "budget_gap": "2",
+      "deadline_gap_minutes": 0
+    }
+  ],
+  "plan_save_status": "not_saved",
+  "plan_id": null,
+  "plan": null,
+  "steps": [
+    {
+      "run_id": "ff478ddb-b486-4c1a-a8f7-87aa30a6561c",
+      "tool": "search_materials",
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "status": "succeeded",
+        "cached": false,
+        "materials": [
+          {
+            "id": "M01",
+            "title": "新品体验素材",
+            "description": "展示产品亮点、使用体验和活动引导的合成素材。",
+            "keywords": [
+              "新品",
+              "产品",
+              "发布"
+            ]
+          },
+          {
+            "id": "M02",
+            "title": "节日活动素材",
+            "description": "展示节日主题、互动话题和活动引导的合成素材。",
+            "keywords": [
+              "节日",
+              "活动",
+              "推广"
+            ]
+          }
+        ],
+        "variants": [
+          "enhanced",
+          "lean"
+        ]
+      }
+    },
+    {
+      "run_id": "ff478ddb-b486-4c1a-a8f7-87aa30a6561c",
+      "tool": "estimate_cost",
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "status": "succeeded",
+        "cached": false,
+        "estimate_id": "est-4db6c8b4c4d4",
+        "material_id": "M01",
+        "variant": "enhanced",
+        "line_items": [
+          {
+            "name": "素材准备",
+            "cost": "2",
+            "duration_minutes": 30
+          },
+          {
+            "name": "增强版脚本",
+            "cost": "6",
+            "duration_minutes": 60
+          },
+          {
+            "name": "内容包装",
+            "cost": "4",
+            "duration_minutes": 30
+          }
+        ],
+        "total_cost": "12",
+        "budget": "6",
+        "budget_gap": "6",
+        "duration_minutes": 120,
+        "start_at": "2026-12-01T09:00:00+08:00",
+        "finish_at": "2026-12-01T11:00:00+08:00",
+        "deadline": "2026-12-01T13:00:00+08:00",
+        "deadline_gap_minutes": 0,
+        "feasible": false
+      }
+    },
+    {
+      "run_id": "ff478ddb-b486-4c1a-a8f7-87aa30a6561c",
+      "tool": "estimate_cost",
+      "status": "succeeded",
+      "result": {
+        "ok": true,
+        "status": "succeeded",
+        "cached": false,
+        "estimate_id": "est-b7d67217d352",
+        "material_id": "M01",
+        "variant": "lean",
+        "line_items": [
+          {
+            "name": "素材准备",
+            "cost": "2",
+            "duration_minutes": 30
+          },
+          {
+            "name": "精简版脚本",
+            "cost": "2",
+            "duration_minutes": 30
+          },
+          {
+            "name": "内容包装",
+            "cost": "4",
+            "duration_minutes": 30
+          }
+        ],
+        "total_cost": "8",
+        "budget": "6",
+        "budget_gap": "2",
+        "duration_minutes": 90,
+        "start_at": "2026-12-01T09:00:00+08:00",
+        "finish_at": "2026-12-01T10:30:00+08:00",
+        "deadline": "2026-12-01T13:00:00+08:00",
+        "deadline_gap_minutes": 0,
+        "feasible": false
+      }
+    }
+  ],
+  "terminal": {
+    "status": "completed",
+    "source": "scripted_mock",
+    "tool_calls": 3,
+    "max_tool_calls": 20
+  },
+  "trace": [
+    {
+      "run_id": "ff478ddb-b486-4c1a-a8f7-87aa30a6561c",
+      "mode": "mock",
+      "step": 1,
+      "tool": "search_materials",
+      "arguments": {},
+      "reason": "检索主题相关素材",
+      "result": {
+        "ok": true,
+        "status": "succeeded",
+        "cached": false,
+        "materials": [
+          {
+            "id": "M01",
+            "title": "新品体验素材",
+            "description": "展示产品亮点、使用体验和活动引导的合成素材。",
+            "keywords": [
+              "新品",
+              "产品",
+              "发布"
+            ]
+          },
+          {
+            "id": "M02",
+            "title": "节日活动素材",
+            "description": "展示节日主题、互动话题和活动引导的合成素材。",
+            "keywords": [
+              "节日",
+              "活动",
+              "推广"
+            ]
+          }
+        ],
+        "variants": [
+          "enhanced",
+          "lean"
+        ]
+      },
+      "next_action": "estimate_cost"
+    },
+    {
+      "run_id": "ff478ddb-b486-4c1a-a8f7-87aa30a6561c",
+      "mode": "mock",
+      "step": 2,
+      "tool": "estimate_cost",
+      "arguments": {
+        "material_id": "M01",
+        "variant": "enhanced"
+      },
+      "reason": "估算候选方案的费用与耗时",
+      "result": {
+        "ok": true,
+        "status": "succeeded",
+        "cached": false,
+        "estimate_id": "est-4db6c8b4c4d4",
+        "material_id": "M01",
+        "variant": "enhanced",
+        "line_items": [
+          {
+            "name": "素材准备",
+            "cost": "2",
+            "duration_minutes": 30
+          },
+          {
+            "name": "增强版脚本",
+            "cost": "6",
+            "duration_minutes": 60
+          },
+          {
+            "name": "内容包装",
+            "cost": "4",
+            "duration_minutes": 30
+          }
+        ],
+        "total_cost": "12",
+        "budget": "6",
+        "budget_gap": "6",
+        "duration_minutes": 120,
+        "start_at": "2026-12-01T09:00:00+08:00",
+        "finish_at": "2026-12-01T11:00:00+08:00",
+        "deadline": "2026-12-01T13:00:00+08:00",
+        "deadline_gap_minutes": 0,
+        "feasible": false
+      },
+      "next_action": "estimate_cost"
+    },
+    {
+      "run_id": "ff478ddb-b486-4c1a-a8f7-87aa30a6561c",
+      "mode": "mock",
+      "step": 3,
+      "tool": "estimate_cost",
+      "arguments": {
+        "material_id": "M01",
+        "variant": "lean"
+      },
+      "reason": "估算候选方案的费用与耗时",
+      "result": {
+        "ok": true,
+        "status": "succeeded",
+        "cached": false,
+        "estimate_id": "est-b7d67217d352",
+        "material_id": "M01",
+        "variant": "lean",
+        "line_items": [
+          {
+            "name": "素材准备",
+            "cost": "2",
+            "duration_minutes": 30
+          },
+          {
+            "name": "精简版脚本",
+            "cost": "2",
+            "duration_minutes": 30
+          },
+          {
+            "name": "内容包装",
+            "cost": "4",
+            "duration_minutes": 30
+          }
+        ],
+        "total_cost": "8",
+        "budget": "6",
+        "budget_gap": "2",
+        "duration_minutes": 90,
+        "start_at": "2026-12-01T09:00:00+08:00",
+        "finish_at": "2026-12-01T10:30:00+08:00",
+        "deadline": "2026-12-01T13:00:00+08:00",
+        "deadline_gap_minutes": 0,
+        "feasible": false
+      },
+      "next_action": "finish"
+    }
+  ],
+  "duplicate": false,
+  "resumable": true
+}
